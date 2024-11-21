@@ -1,0 +1,19 @@
+services:
+  web:
+    image: php:7.4-apache
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+    environment:
+      - COMPOSER_HOME=app/composer
+      - COMPOSER_CACHE_DIR=app/composer/cache
+    volumes:
+      - .:/var/www/html
+  db:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=mydb
+      - MYSQL_USER=myuser
+      - MYSQL_PASSWORD=mypassword
