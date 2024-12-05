@@ -1,35 +1,35 @@
 <?php
-// Incluir o arquivo de configuração
+// Include the configuration file
 require_once 'config.php';
 
-// Incluir o arquivo de header
+// Include the header file
 require_once 'header.php';
 
-// Mostrar o conteúdo da página de pagamento
+// Display the payment page content
 ?>
 <div class="container">
-    <h1>Pagamento</h1>
+    <h1>Payment</h1>
     <form>
-        <label>Método de pagamento:</label>
-        <select name="metodo_pagamento">
-            <option value="cartao">Cartão de crédito</option>
-            <option value="boleto">Boleto bancário</option>
+        <label>Payment method:</label>
+        <select name="payment_method">
+            <option value="credit_card">Credit Card</option>
+            <option value="bank_slip">Bank Slip</option>
         </select>
         <br>
-        <label>Número do cartão:</label>
-        <input type="text" name="numero_cartao">
+        <label>Card number:</label>
+        <input type="text" name="card_number">
         <br>
-        <label>Validade do cartão:</label>
-        <input type="text" name="validade_cartao">
+        <label>Card expiry date:</label>
+        <input type="text" name="card_expiry">
         <br>
-        <label>Código de segurança:</label>
-        <input type="text" name="codigo_seguranca">
+        <label>Security code:</label>
+        <input type="text" name="security_code">
         <br>
-        <input type="submit" value="Pagar">
+        <input type="submit" value="Pay">
     </form>
 </div>
 
 <?php
-// Incluir o arquivo de footer
+// Include the footer file
 require_once 'footer.php';
 ?>

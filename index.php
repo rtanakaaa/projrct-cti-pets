@@ -1,17 +1,9 @@
 <?php
-// Incluir o arquivo de configuração
-require_once 'config.php';
-
-// Incluir o arquivo de header
-
-// Mostrar o conteúdo da página inicial
+require_once 'includes/header.php';
 ?>
-<div class="container">
-    <h1>Welcome to Pets paradise</h1>
-    <p>Here you'll find all the things to your pet</p>
-</div>
-
+<main>
+    <!-- conteúdo do arquivo index.php -->
+</main>
 <?php
-// Incluir o arquivo de footer
-require_once 'footer.php';
+require_once 'includes/footer.php';
 ?>

@@ -1,3 +1,12 @@
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
+
+// Use o Prisma para realizar operações de CRUD
+prisma.user.findMany().then(users => {
+  console.log(users);
+});
+
 const PEXELS_API_KEY = 'fCVpdmt6KJDfnNt3QzPUMzQq4NTuNyBuQvTG3zXE18aXq6HXm82j0fWt'; // Replace with your actual Pexels API key
 
 const products = [
