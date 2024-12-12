@@ -2,13 +2,14 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-app.set('views', path.join(__dirname));
-app.set('view engine', 'html');
+console.log(__dirname);
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(3000, () => {
   console.log('Servidor rodando na porta 3000');
 });
+
+console.log(__dirname);
