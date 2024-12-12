@@ -1,29 +1,11 @@
-generator client {
-  provider = "prisma-client-js"
-}
-
+// schema.prisma
 datasource db {
-  provider = "postgresql" // ou "sqlite" se preferir começar com algo mais simples
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-model Category {
-  id          Int       @id @default(autoincrement())
-  name        String
-  slug        String    @unique
-  description String
-  iconName    String
-  products    Product[]
-}
-
 model Product {
-  id            Int      @id @default(autoincrement())
-  name          String
-  slug          String   @unique
-  description   String
-  price         Float
-  stockQuantity Int
-  isFeatured    Boolean  @default(false)
-  categoryId    Int
-  category      Category @relation(fields: [categoryId], references: [id])
+  id       String   @id @default(cuid())
+  name     String
+  price    Float
 }

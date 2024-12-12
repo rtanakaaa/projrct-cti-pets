@@ -14,7 +14,7 @@ require_once 'header.php';
     // Conectar ao banco de dados
     $conn = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName);
 
-    // Selecionar os produtos
+    // Selecionar osa produtos
     $query = "SELECT * FROM produtos";
     $result = mysqli_query($conn, $query);
 
