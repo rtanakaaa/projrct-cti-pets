@@ -106,3 +106,11 @@ async function fetchProducts() {
   
   // Chame esta função quando a página carregar
   document.addEventListener('DOMContentLoaded', fetchProducts);
+  fetch('http://localhost:3000/produtos')
+  .then(response => response.json())
+  .then(data => {
+    // ...
+  })
+  .catch(error => {
+    console.error('Erro ao fazer requisição:', error);
+  });
