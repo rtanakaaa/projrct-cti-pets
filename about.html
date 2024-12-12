@@ -1,72 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paradise Pets Store - About Us</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logo">Paradise Pets </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
-        </nav>
+      <nav>
+        <div class="logo">Paradise Pets</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div id="cart-icon">🛒 <span id="cart-count">0</span></div>
+      </nav>
     </header>
 
     <main>
-        <section id="about">
-            <h1>About Paradise Pets Store</h1>
-            <p>Paradise Pets Store is dedicated to providing the best products and services for your furry friends. Our story began in 2010 when our founder, Jane Doe, realized the need for a one-stop shop for all pet needs.</p>
-            <p>Today, we offer a wide range of products for dogs, cats, fish, birds, and small animals. Our team of pet enthusiasts is always ready to help you find the perfect products for your pets.</p>
-            <h2>Our Mission</h2>
-            <p>To enhance the lives of pets and their owners by providing high-quality products, expert advice, and exceptional customer service.</p>
-            <h2>Our Values</h2>
-            <ul>
-                <li>Pet Well-being: We prioritize the health and happiness of all pets.</li>
-                <li>Quality: We offer only the best products from trusted brands.</li>
-                <li>Customer Satisfaction: We strive to exceed our customers' expectations.</li>
-                <li>Community: We actively support local animal shelters and rescue organizations.</li>
-            </ul>
-        </section>
+      <section id="about">
+        <h1>About Paradise Pets Store</h1>
+        <p>
+          Paradise Pets Store is dedicated to providing the best products and
+          services for your furry friends. Our story began in 2010 when our
+          founder, Jane Doe, realized the need for a one-stop shop for all pet
+          needs.
+        </p>
+        <p>
+          Today, we offer a wide range of products for dogs, cats, fish, birds,
+          and small animals. Our team of pet enthusiasts is always ready to help
+          you find the perfect products for your pets.
+        </p>
+        <h2>Our Mission</h2>
+        <p>
+          To enhance the lives of pets and their owners by providing
+          high-quality products, expert advice, and exceptional customer
+          service.
+        </p>
+        <h2>Our Values</h2>
+        <ul>
+          <li>
+            Pet Well-being: We prioritize the health and happiness of all pets.
+          </li>
+          <li>Quality: We offer only the best products from trusted brands.</li>
+          <li>
+            Customer Satisfaction: We strive to exceed our customers'
+            expectations.
+          </li>
+          <li>
+            Community: We actively support local animal shelters and rescue
+            organizations.
+          </li>
+        </ul>
+      </section>
     </main>
 
     <div id="cart-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Your Shopping Cart</h2>
-            <div id="cart-items"></div>
-            <p>Total: $<span id="cart-total">0.00</span></p>
-            <button id="checkout-btn">Proceed to Checkout</button>
-        </div>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Your Shopping Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button id="checkout-btn">Proceed to Checkout</button>
+      </div>
     </div>
 
     <div id="checkout-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Checkout</h2>
-            <form id="checkout-form">
-                <input type="text" name="full-name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="text" name="address" placeholder="Shipping Address" required>
-                <input type="text" name="card-number" placeholder="Card Number" required>
-                <input type="text" name="expiry" placeholder="MM/YY" required>
-                <input type="text" name="cvv" placeholder="CVV" required>
-                <button type="submit">Place Order</button>
-            </form>
-        </div>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Checkout</h2>
+        <form id="checkout-form">
+          <input
+            type="text"
+            name="full-name"
+            placeholder="Full Name"
+            required
+          />
+          <input type="email" name="email" placeholder="Email" required />
+          <input
+            type="text"
+            name="address"
+            placeholder="Shipping Address"
+            required
+          />
+          <input
+            type="text"
+            name="card-number"
+            placeholder="Card Number"
+            required
+          />
+          <input type="text" name="expiry" placeholder="MM/YY" required />
+          <input type="text" name="cvv" placeholder="CVV" required />
+          <button type="submit">Place Order</button>
+        </form>
+      </div>
     </div>
 
     <footer>
-        <p>&copy; 2023 Paradise Pets Store. All rights reserved.</p>
+      <p>&copy; 2023 Paradise Pets Store. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

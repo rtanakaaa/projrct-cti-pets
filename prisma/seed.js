@@ -1,18 +1,38 @@
-const { PrismaClient } = require('@prisma/client')
+const { PrismaClient } = require('@prisma/client');
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
 
 async function main() {
   const categories = [
-    { name: 'Cães', slug: 'caes', description: 'Produtos para cães', iconName: 'Dog' },
-    { name: 'Gatos', slug: 'gatos', description: 'Produtos para gatos', iconName: 'Cat' },
-    { name: 'Peixes', slug: 'peixes', description: 'Produtos para peixes', iconName: 'Fish' },
-    { name: 'Aves', slug: 'aves', description: 'Produtos para aves', iconName: 'Bird' },
-  ]
+    {
+      name: 'Cães',
+      slug: 'caes',
+      description: 'Produtos para cães',
+      iconName: 'Dog',
+    },
+    {
+      name: 'Gatos',
+      slug: 'gatos',
+      description: 'Produtos para gatos',
+      iconName: 'Cat',
+    },
+    {
+      name: 'Peixes',
+      slug: 'peixes',
+      description: 'Produtos para peixes',
+      iconName: 'Fish',
+    },
+    {
+      name: 'Aves',
+      slug: 'aves',
+      description: 'Produtos para aves',
+      iconName: 'Bird',
+    },
+  ];
 
   for (const category of categories) {
-    const createdCategory = await prisma.category.create({ data: category })
-    console.log(`Categoria criada: ${createdCategory.name}`)
+    const createdCategory = await prisma.category.create({ data: category });
+    console.log(`Categoria criada: ${createdCategory.name}`);
 
     const product = await prisma.product.create({
       data: {
@@ -22,18 +42,18 @@ async function main() {
         price: 49.99,
         stockQuantity: 100,
         isFeatured: true,
-        categoryId: createdCategory.id
+        categoryId: createdCategory.id,
       },
-    })
-    console.log(`Produto criado: ${product.name}`)
+    });
+    console.log(`Produto criado: ${product.name}`);
   }
 }
 
 main()
   .catch((e) => {
-    console.error(e)
-    process.exit(1)
+    console.error(e);
+    process.exit(1);
   })
   .finally(async () => {
-    await prisma.$disconnect()
-  })
+    await prisma.$disconnect();
+  });

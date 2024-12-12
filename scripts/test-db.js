@@ -1,6 +1,6 @@
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient()
+const prisma = new PrismaClient();
 
 async function main() {
   try {
@@ -10,10 +10,10 @@ async function main() {
         name: 'Cães',
         slug: 'caes',
         description: 'Produtos para cães',
-        iconName: 'Dog'
+        iconName: 'Dog',
       },
-    })
-    console.log('Categoria criada:', category)
+    });
+    console.log('Categoria criada:', category);
 
     // Criar um produto de teste
     const product = await prisma.product.create({
@@ -24,22 +24,24 @@ async function main() {
         price: 59.99,
         stockQuantity: 100,
         isFeatured: true,
-        categoryId: category.id
+        categoryId: category.id,
       },
-    })
-    console.log('Produto criado:', product)
+    });
+    console.log('Produto criado:', product);
 
     // Buscar todas as categorias com seus produtos
     const allCategories = await prisma.category.findMany({
-      include: { products: true }
-    })
-    console.log('Todas as categorias com produtos:', JSON.stringify(allCategories, null, 2))
-
+      include: { products: true },
+    });
+    console.log(
+      'Todas as categorias com produtos:',
+      JSON.stringify(allCategories, null, 2)
+    );
   } catch (error) {
-    console.error('Erro:', error)
+    console.error('Erro:', error);
   } finally {
-    await prisma.$disconnect()
+    await prisma.$disconnect();
   }
 }
 
-main()
+main();
